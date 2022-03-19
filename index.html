@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>imageLibrary</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        .icons {
+            display: none;
+        }
+        #navbar {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            position: relative;
+            top: 0px;
+        }
+        #logo {
+            margin: 10px 8px;
+        }
+        #logo img {
+            height: 60px;
+            margin: 3px 6px;
+        }
+        #logo img:hover {
+            transition: all 0.5s ease-in-out;
+            transform: rotate(360deg);
+        }
+        #navbar ul {
+            display: flex;
+            margin-left: 300px;
+            justify-content: space-between;
+        }
+        #navbar ul li {
+            list-style: none;
+            font-size: 1.3rem;
+        }
+        #navbar ul li a {
+            color: rgb(241, 87, 15);
+            padding: 3px 22px;
+            border-radius: 20px;
+            text-decoration: none;
+        }
+        #navbar ul li a:hover {
+            color: black;
+            background-color: rgb(185, 185, 253);
+        }
+        #navbar::before {
+            content: "";
+            background-color: rgb(0, 255, 0);
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.4;
+        }
+        .box1 {
+            display: grid;
+            grid-template-columns: repeat(4, auto);
+            justify-content: space-between;
+        }
+        .box1 img {
+            height: 18rem;
+            width: 18rem;
+            border: 3px solid red;
+            border-radius: 10px;
+            margin: 20px 0px;
+        }
+        section h1 {
+            display: block;
+            text-align: center;
+            font-size: 2rem;
+            color: orange;
+            padding: 1rem;
+        }
+        section {
+            margin: 10px;
+        }
+        footer{
+            font-size: 1.5rem;
+        }
+        @media screen and (max-width:1200px) {
+            .box1 img {
+                height: 15rem;
+                width: 15rem;
+            }
+        }
+        @media screen and (max-width:1000px) {
+            .box1 {
+                display: grid;
+                grid-template-columns: repeat(3, auto);
+                justify-content: space-between;
+            }
+
+            .box1 img {
+                height: 16rem;
+                width: 16rem;
+            }
+        }
+        @media screen and (max-width:890px) {
+            .box1 {
+                display: grid;
+                grid-template-columns: repeat(2, auto);
+                justify-content: space-between;
+            }
+
+            .box1 img {
+                height: 22rem;
+                width: 24rem;
+            }
+            #navbar ul{
+                margin-left: 100px;
+            }
+        }
+        @media screen and (max-width:800px) {
+            #navbar {
+                display: none;
+            }
+            #content {
+                display: flex;
+            }
+            .icons {
+                display: block;
+                position: sticky;
+                top: 0;
+                width: 176px;
+                height: 400vh;
+                background-color: rgb(0, 255, 0);
+                color: rgb(241, 87, 15);
+                opacity: 0.4;
+            }
+            .logo {
+                margin: 35px 10px;
+            }
+            .icons .material-icons {
+                display: inline-block;
+            }
+            .icons .logo img {
+                filter: invert(100%);
+                width: 70px;
+                height: 50px;
+            }
+            .icons .logo p {
+                color: blue;
+                font-size: 1.5rem;
+                margin-bottom: 30px;
+                opacity: 1;
+            }
+            li span a{
+                font-size: 1.3rem;
+                text-decoration: none;
+            }
+            .box1 {
+                display: grid;
+                grid-template-columns: repeat(1, auto);
+            }
+            .box1 img {
+                height: 37.5rem;
+                width: 37.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="logo1.png" alt="infinity">
+        </div>
+        <div class="options">
+            <ul>
+                <li><a href="#navbar">Home</a></li>
+                <li><a href="#India">India</a></li>
+                <li><a href="#Nature">Nature</a></li>
+                <li><a href="#Space">Space & Tech</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div id="content">
+        <div class="icons">
+            <div class="logo">
+                <img src="logo1.png" alt="infinity">
+                <p>imageLibrary</p>
+            </div>
+            <ul>
+                <li>
+                    <span class="material-icons">home</span>
+                    <span><a href="#Home">Home</a></span>
+                </li>
+                <li>
+                    <i class="material-icons">public</i>
+                    <span><a href="#India">India</a></span>
+                </li>
+                <li>
+                    <i class="material-icons">grass</i>
+                    <span><a href="#Nature">Nature</a></span>
+                </li>
+                <li>
+                    <i class="material-icons">rocket_launch</i>
+                    <span><a href="#Space">Space & Tech</a></span>
+                </li>
+            </ul>
+        </div>
+        <div class="images">
+            <section id="India">
+                <h1>India</h1>
+                <div class="box1">
+                    <img src="India/5.jpg" alt="loading">
+                    <img src="India/8.jpg" alt="loading">
+                    <img src="India/2.jpg" alt="loading">
+                    <img src="India/3.jpg" alt="loading">
+                    <img src="India/4.jpg" alt="loading">
+                    <img src="India/1.jpg" alt="loading">
+                    <img src="India/6.jpg" alt="loading">
+                    <img src="India/7.jpg" alt="loading">
+                </div>
+            </section>
+            <section id="Nature">
+                <h1>Nature</h1>
+                <div class="box1">
+                    <img src="Nature/1.jpg" alt="loading">
+                    <img src="Nature/2.jpg" alt="loading">
+                    <img src="Nature/3.jpg" alt="loading">
+                    <img src="Nature/4.jpg" alt="loading">
+                    <img src="Nature/5.jpg" alt="loading">
+                    <img src="Nature/6.jpg" alt="loading">
+                    <img src="Nature/7.jpg" alt="loading">
+                    <img src="Nature/8.jpg" alt="loading">
+                </div>
+            </section>
+            <section id="Space">
+                <h1>Space & Tech</h1>
+                <div class="box1">
+                    <img src="Space/1.jpg" alt="loading">
+                    <img src="Space/2.jpg" alt="loading">
+                    <img src="Space/3.jpg" alt="loading">
+                    <img src="Space/4.jpg" alt="loading">
+                    <img src="Space/5.jpg" alt="loading">
+                    <img src="Space/6.jpg" alt="loading">
+                    <img src="Space/7.jpg" alt="loading">
+                    <img src="Space/8.jpg" alt="loading">
+                </div>
+            </section>
+        </div>
+    </div>
+    <footer>Copyright &copy;. All Rights Reserved</footer>
+</body>
+</html>
